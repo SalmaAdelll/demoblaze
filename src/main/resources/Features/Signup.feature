@@ -12,12 +12,13 @@ Scenario Outline:  Sign up test
 
   Examples:
 
-  | user                 |  password         |         expectedMessage           |
-  | Mahmoud2027          |  4555555          |        Sign up successful.        |
-  | Mahmoud2025          |  4555555          |        This user already exist.   |
+  | user                 |  password      |         expectedMessage                 |
+  | Mahmoud2027          |  4555555       |        Sign up successful.              |
+  | Mahmoud2025          |  4555555       |        This user already exist.         |
+  | Mahmoud2025          |                |  Please fill out Username and Password. |
+  |                      | 4555555        |  Please fill out Username and Password. |
 
   @smo
-
   Scenario Outline: Verify that Two Products Are Purchased Successfully
 
     Given User navigate to Demoblaze website to login
@@ -36,12 +37,13 @@ Scenario Outline:  Sign up test
     And user can open cart page
     Then user can check first product name "<ExpectedMessageforFirstProduct>"
     Then user can check Second product name "<ExpectedMessageforSecondProduct>"
+    Then user can check Total "<ExpectedMessageforTotal>"
 
 
     Examples:
 
-      | user                 | password         |ExpectedMessageforFirstProduct   |  ExpectedMessageforSecondProduct         |
-      | Mahmoud2025          | 4555555          | Sony vaio i7                    |  Sony vaio i5                                  |
+      | user          | password |ExpectedMessageforFirstProduct |  ExpectedMessageforSecondProduct| ExpectedMessageforTotal |
+      | Mahmoud2025   | 4555555  | Sony vaio i5                  |  Nexus 6                        |  1440                   |
 
 
 

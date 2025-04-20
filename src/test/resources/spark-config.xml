@@ -14,10 +14,10 @@
         <protocol>https</protocol>
 
         <!-- title of the document -->
-        <documentTitle>openbrowser</documentTitle>
+        <documentTitle>AmitFinalprojecr-Demoblaze</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>openbrowser UI </reportName>
+        <reportName>AmitFinalprojecr-Demoblaze UI </reportName>
 
         <!-- view report without internet -->
         <offlineMode>true</offlineMode>

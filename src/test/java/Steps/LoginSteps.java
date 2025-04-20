@@ -63,6 +63,8 @@ public class LoginSteps {
         login.Add_First_product().click();
     }
 
+
+
     @And("user can go back")
     public void user_can_go_back() throws InterruptedException {
         login.back();
@@ -104,8 +106,12 @@ public class LoginSteps {
         String actualMessage = String.valueOf(login.getSecondProductMessage());
         Assert.assertEquals(actualMessage, ExpectedMessageforSecondProduct);
 
-
     }
 
+    @Then("user can check Total {string}")
+    public void userCanCheckTotal(String ExpectedMessageforTotal) throws InterruptedException {
+        String actualMessage = String.valueOf(login.getSecondTotalAmount());
+        Assert.assertEquals(actualMessage, ExpectedMessageforTotal);
+    }
 
 }
