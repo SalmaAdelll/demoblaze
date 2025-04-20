@@ -1,7 +1,7 @@
 Feature: User Sign Up
   Scenario: Successful user signup
 
-Scenario Outline:  Sign up test
+Scenario Outline:  Sign up test salma
 
     Given User navigate to Demoblaze website
     When user click on signup button
